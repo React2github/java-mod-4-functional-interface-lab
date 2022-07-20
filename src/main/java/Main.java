@@ -1,13 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         ConcatStringFunction func = str -> String.join("", str).toUpperCase();
-        String res = func.apply("banana", "grape", "smoothie");
+        String res = func.apply("banana");
         System.out.println(res); // BANANAGRAPESMOOTHIE
 
-				String res2 = func.apply("apple", "orange", "pineapple", "smoothie");
-				System.out.println(res); // APPLEORANGEPINEAPPLESMOOTHIE
+				String res2 = func.apply("apple");
+				System.out.println(res2); // APPLEORANGEPINEAPPLESMOOTHIE
     }
 }
 
 @FunctionalInterface
-// your code here
+interface ConcatStringFunction {
+    String apply(String str2);
+};
